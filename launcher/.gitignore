@@ -1,0 +1,67 @@
+# build output
+dist/
+*.wgt
+*.tpk
+.buildResult/
+
+# logs
+logs/
+*.log
+npm-debug.log*
+
+# dependencies
+node_modules/
+
+# signing material — never commit a Tizen author/distributor certificate
+*.p12
+*.pfx
+*.pem
+*.key
+*.cer
+*.crt
+author-signature.xml
+signature*.xml
+.sign/
+.tizen-cli-config
+
+# secrets
+.env
+.env.*
+
+# Per-TV config: coordinates, devlog address. config.js keeps the nulls and this overrides them,
+# so nothing has to be stripped before a push. See src/js/config.local.example.js.
+src/js/config.local.js
+
+# Your own wallpapers (country, city, photos): scripts/add-wallpapers.mjs puts them here.
+src/img/wallpapers/local/
+src/js/wallpapers.local.js
+
+# native helper build output (device-specific; build it yourself)
+native/**/bin/
+native/**/obj/
+native/build/
+
+# Easter-egg assets: personal photos and a music track. Kept out of git deliberately —
+# they ship only in local builds, and runner-game.js degrades to a notice without them.
+src/img/easter-egg/
+src/audio/
+
+# never publish a device baseline or a conversation transcript
+*-baseline.json
+original-*.json
+native-snapshot.json
+*conversation*.pdf
+
+# local agent + editor settings
+.claude/settings.local.json
+.vscode/
+.idea/
+*.swp
+*~
+
+# macOS
+.DS_Store
+._*
+.AppleDouble
+.Spotlight-V100
+.Trashes

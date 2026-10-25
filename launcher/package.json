@@ -1,0 +1,13 @@
+{
+  "name": "tizenmod",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Minimal remote-friendly launcher for a Samsung Tizen TV",
+  "scripts": {
+    "preview": "node scripts/serve.mjs",
+    "build": "sh scripts/build.sh",
+    "devlog": "node scripts/devlog-server.mjs",
+    "icon": "node scripts/make-icon.mjs",
+    "fetch-assets": "node scripts/fetch-assets.mjs"
+  }
+}
